@@ -15,11 +15,3 @@ public class IntegerToRomanTest {
         assert IntegerToRoman.solution(input).equals(expectedResult);
     }
 }
-//        HashMap<Integer, String> intToRomanMap = new HashMap<Integer, String>();
-//        intToRomanMap.put(1, "I");
-//        intToRomanMap.put(5, "V");
-//        intToRomanMap.put(10, "X");
-//        intToRomanMap.put(50, "L");
-//        intToRomanMap.put(100, "C");
-//        intToRomanMap.put(500, "D");
-//        intToRomanMap.put(1000, "M");
