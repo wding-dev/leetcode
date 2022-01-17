@@ -1,14 +1,8 @@
 public class ContainerWithMostWater {
-
-    public static void main(String[] args) {
-        solution();
-    }
-
-    public static int solution() {
+    public static int solution(int[] heights) {
 
         int maxSize = 0;
         int size = 0;
-        int[] heights = {1,8,6,2,5,4,8,3,7};
         int height = 0;
         int length = 0;
 
