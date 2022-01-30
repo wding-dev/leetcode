@@ -21,21 +21,32 @@ public class TrappingRainWater {
     public static int solution(int[] height) {
         int result = 0;
 
-        int i = 0;
-        int j = 0;
+        int leftPointer = 0;
+        int rightPointer = height.length - 1;
 
-        int buffer = 0;
+        int leftMax = 0;
+        int rightMax = 0;
 
-        while (j < height.length - 1) {
-            j++;
+        while (leftPointer < rightPointer) {
+            if (height[leftPointer] < height[rightPointer]) {
 
-            if (height[i] > height[j]) {
-                buffer = buffer + (height[i] - height[j]);
+                if (height[leftPointer] > leftMax) {
+                    leftMax = height[leftPointer];
+                } else {
+                    result += leftMax - height[leftPointer];
+                }
+
+                leftPointer++;
             } else {
-                i = j;
-                result = result + buffer;
-            }
 
+                if (height[rightPointer] > rightMax) {
+                    rightMax = height[rightPointer];
+                } else {
+                    result += rightMax - height[rightPointer];
+                }
+
+                rightPointer--;
+            }
         }
 
         return result;
