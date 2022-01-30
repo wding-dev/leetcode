@@ -28,7 +28,7 @@ public class ContainerWithMostWater {
                     if (size > maxSize) {
                         maxSize = size;
                     }
-                    System.out.println("");
+                    System.out.println();
                 }
 
 

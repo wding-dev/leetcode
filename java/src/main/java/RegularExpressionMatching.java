@@ -26,7 +26,6 @@ It is guaranteed for each appearance of the character '*', there will be a previ
  */
 
 
-
 public class RegularExpressionMatching {
     public static boolean solution(String s, String p) {
 

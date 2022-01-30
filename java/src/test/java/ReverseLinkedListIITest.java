@@ -19,7 +19,6 @@ public class ReverseLinkedListIITest {
         LinkedList<Integer> result = new LinkedList<Integer>();
 
 
-
         assert ReverseLinkedListII.solution(head, left, right) == result;
     }
 }

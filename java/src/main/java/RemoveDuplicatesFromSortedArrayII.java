@@ -1,11 +1,11 @@
 public class RemoveDuplicatesFromSortedArrayII {
 
     public static int solution(int[] nums) {
-        if(nums==null){
+        if (nums == null) {
             return 0;
         }
 
-        if (nums.length <= 2){
+        if (nums.length <= 2) {
             return nums.length;
         }
 
@@ -18,7 +18,7 @@ public class RemoveDuplicatesFromSortedArrayII {
                 if (i == 0) {
                     i++;
                     j++;
-                } else if(nums[i] == nums[i-1]) {
+                } else if (nums[i] == nums[i - 1]) {
                     j++;
                 } else {
                     i++;
@@ -33,6 +33,6 @@ public class RemoveDuplicatesFromSortedArrayII {
             }
         }
 
-        return i+1;
+        return i + 1;
     }
 }

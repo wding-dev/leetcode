@@ -1,0 +1,44 @@
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+public class TrappingRainWater {
+    private static final Logger LOGGER = Logger.getLogger( TrappingRainWater.class.getName() );
+
+    public static void main(String[] args) {
+        int[] nums = new int[]{0,1,0,2,1,0,1,3,2,1,2,1};
+
+        int result = solution(nums);
+
+        if (result == 6) {
+            LOGGER.log( Level.INFO, "Answer {0}", "correct");
+        } else {
+            LOGGER.log( Level.SEVERE, "Answer {0}", "incorrect");
+        }
+    }
+
+    public static int solution(int[] height) {
+        int result = 0;
+
+        int i = 0;
+        int j = 0;
+
+        int buffer = 0;
+
+        while (j < height.length - 1) {
+            j++;
+
+            if (height[i] > height[j]) {
+                buffer = buffer + (height[i] - height[j]);
+            } else {
+                i = j;
+                result = result + buffer;
+            }
+
+        }
+
+        return result;
+    }
+
+}

@@ -1,4 +1,4 @@
-import utils.ListNode;
+import helpers.datastructure.ListNode;
 
 public class RemoveDuplicatesfromSortedList {
 
